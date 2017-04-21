@@ -6,13 +6,13 @@
     <Company></Company>
     <Description>Decline words</Description>
     <Product>Decline words</Product>
-	<Version>8.0.30703</Version>
-    <AssemblyVersion>8.0.30703</AssemblyVersion>
-    <FileVersion>8.0.30703</FileVersion>
+	<Version>8.1</Version>
+    <AssemblyVersion>8.1</AssemblyVersion>
+    <FileVersion>8.1</FileVersion>
     <ApplicationIcon />
     <RootNamespace>LingvoNET</RootNamespace>
     <AssemblyName>LingvoNET</AssemblyName>
-	<TargetFramework>netstandard1.5</TargetFramework>
+	<TargetFramework>netstandard1.6</TargetFramework>
     <OutputTypeEx>library</OutputTypeEx>
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <StartupObject />
@@ -45,5 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.3.0" />
   </ItemGroup>
 </Project>

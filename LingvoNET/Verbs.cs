@@ -37,7 +37,7 @@ namespace LingvoNET
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))
             using (var zip = new GZipStream(stream, CompressionMode.Decompress))
-            using (var sr = new StreamReader(zip, Encoding.GetEncoding(1251)))
+            using (var sr = new StreamReader(zip, StreamEncodings.GetEncoding()))
             while (sr.Peek() >= 0)
             {
                 var line = sr.ReadLine();
@@ -78,7 +78,7 @@ namespace LingvoNET
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))
             using (var zip = new GZipStream(stream, CompressionMode.Decompress))
-            using (var sr = new StreamReader(zip, Encoding.GetEncoding(1251)))
+            using (var sr = new StreamReader(zip, StreamEncodings.GetEncoding()))
                 while (sr.Peek() >= 0)
                 {
                     var line = sr.ReadLine();
