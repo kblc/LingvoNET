@@ -31,7 +31,7 @@ namespace LingvoNET
             schemas.BeginInit();
             items.Clear();
 
-            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = typeof(Nouns).GetTypeInfo().Assembly;
             var resourceName = "LingvoNET.Dict.сущ.bin";
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))

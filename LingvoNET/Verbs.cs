@@ -32,7 +32,7 @@ namespace LingvoNET
             schemas.BeginInit();
             items.Clear();
 
-            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = typeof(Verbs).GetTypeInfo().Assembly;
             var resourceName = "LingvoNET.Dict.глаголы.bin";
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))

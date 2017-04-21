@@ -1,18 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{FC93B545-7968-4B97-94DA-09CBC00E3F78}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <Authors>Pavel Torgashov</Authors>
+    <Company></Company>
+    <Description>Decline words</Description>
+    <Product>Decline words</Product>
+	<Version>8.0.30703</Version>
+    <AssemblyVersion>8.0.30703</AssemblyVersion>
+    <FileVersion>8.0.30703</FileVersion>
+    <ApplicationIcon />
     <RootNamespace>LingvoNET</RootNamespace>
     <AssemblyName>LingvoNET</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
+	<TargetFramework>netstandard1.5</TargetFramework>
+    <OutputTypeEx>library</OutputTypeEx>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <StartupObject />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,51 +36,14 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\LingvoNET.XML</DocumentationFile>
   </PropertyGroup>
-  <PropertyGroup>
-    <SignAssembly>true</SignAssembly>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyOriginatorKeyFile>LingvoNET_key.pfx</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Adjectives.cs" />
-    <Compile Include="Adverbs.cs" />
-    <Compile Include="Analyser.cs" />
-    <Compile Include="BinarySearcher.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="ExtensionHelper.cs" />
-    <Compile Include="Nouns.cs" />
-    <Compile Include="Pronouns.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schema.cs" />
-    <Compile Include="Stemmer.cs" />
-    <Compile Include="StringReverseComparer.cs" />
-    <Compile Include="Verbs.cs" />
-  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Dict\глаголы.bin" />
     <EmbeddedResource Include="Dict\мест.bin" />
     <EmbeddedResource Include="Dict\прилаг.bin" />
     <EmbeddedResource Include="Dict\сущ.bin" />
+    <EmbeddedResource Include="Dict\ImperfectPerfect.bin" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Dict\ImperfectPerfect.bin" />
-    <None Include="LingvoNET_key.pfx" />
+    <Folder Include="Properties\" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

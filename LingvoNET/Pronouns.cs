@@ -17,7 +17,7 @@ namespace LingvoNET
 
         static Pronouns()
         {
-            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = typeof(Pronouns).GetTypeInfo().Assembly;
             var resourceName = "LingvoNET.Dict.мест.bin";
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))

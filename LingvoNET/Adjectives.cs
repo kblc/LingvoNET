@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
-using System.Linq;
 using System.Reflection;
 using System.Text;
 
@@ -21,7 +20,7 @@ namespace LingvoNET
             schemas.BeginInit();
             items.Clear();
 
-            var assembly = Assembly.GetExecutingAssembly();
+            var assembly = typeof(Adjectives).GetTypeInfo().Assembly;
             var resourceName = "LingvoNET.Dict.прилаг.bin";
 
             using (var stream = assembly.GetManifestResourceStream(resourceName))
