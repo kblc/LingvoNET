@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace LingvoNET
 {
@@ -11,9 +9,9 @@ namespace LingvoNET
 
         static Analyser()
         {
-            foreach(var item in Verbs.GetAll())
-            foreach(var w in new HashSet<string>(Verbs.schemas[item.SchemaIndex].GetAllForms(item.Word)))
-                Items.Add(new WordForm {Form = w, SourceForm = item.Word, Type = WordType.Verb});
+            foreach (var item in Verbs.GetAll())
+                foreach (var w in new HashSet<string>(Verbs.schemas[item.SchemaIndex].GetAllForms(item.Word)))
+                    Items.Add(new WordForm { Form = w, SourceForm = item.Word, Type = WordType.Verb });
 
             foreach (var item in Nouns.GetAll())
             foreach (var w in new HashSet<string>(Nouns.schemas[item.SchemaIndex].GetAllForms(item.Word)))

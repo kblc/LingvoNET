@@ -6,9 +6,9 @@
     <Company></Company>
     <Description>Decline words</Description>
     <Product>Decline words</Product>
-	<Version>8.1</Version>
-    <AssemblyVersion>8.1</AssemblyVersion>
-    <FileVersion>8.1</FileVersion>
+	<Version>8.1.1</Version>
+    <AssemblyVersion>8.1.1</AssemblyVersion>
+    <FileVersion>8.1.1</FileVersion>
     <ApplicationIcon />
     <RootNamespace>LingvoNET</RootNamespace>
     <AssemblyName>LingvoNET</AssemblyName>
